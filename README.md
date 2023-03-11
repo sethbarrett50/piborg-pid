@@ -3,11 +3,11 @@ This repository contains Python code for controlling a PiBorg robot using OpenCV
 
 ## Requirements
 To use this code, you will need:
--Raspberry Pi with Raspbian OS
--PiBorg ThunderBorg motor controller
--Raspberry Pi camera module
--OpenCV library
--Python 3.x
+- Raspberry Pi with Raspbian OS
+- PiBorg ThunderBorg motor controller
+- Raspberry Pi camera module
+- OpenCV library
+- Python 3.x
 
 ## Usage
 To use the code, follow these steps:
