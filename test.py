@@ -1,7 +1,8 @@
 import time
 import cv2
 import numpy as np
-import ThunderBorg3 as ThunderBorg
+import tborg as ThunderBorg
+from pid import PID
 
 # Initialize the ThunderBorg motor controller
 TB = ThunderBorg.ThunderBorg()
@@ -23,21 +24,6 @@ Kd = 0.05
 # Set motor power limit
 max_power = 1.0
 
-# Initialize PID controller
-class PID:
-    def __init__(self, Kp, Ki, Kd):
-        self.Kp = Kp
-        self.Ki = Ki
-        self.Kd = Kd
-        self.last_error = 0
-        self.integral = 0
-
-    def update(self, error):
-        derivative = error - self.last_error
-        self.integral += error
-        output = (self.Kp * error) + (self.Ki * self.integral) + (self.Kd * derivative)
-        self.last_error = error
-        return output
 
 pid = PID(Kp, Ki, Kd)
 
